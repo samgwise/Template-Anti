@@ -185,7 +185,7 @@ class Template::Anti::Template {
     #| Apply the given selection criteria to the template.
     method find(Str $selector) {
         my @nodes = $!sq($selector);
-        return Template::Anti::NodeSet.new(:@nodes);
+        return Template::Anti::NodeSet.new(:nodes(|@nodes));
     }
 
     #| Apply the given selection criteria to the template.
